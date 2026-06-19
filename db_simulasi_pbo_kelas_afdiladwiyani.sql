@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 19, 2026 at 02:47 AM
+-- Generation Time: Jun 19, 2026 at 02:57 AM
 -- Server version: 8.4.3
 -- PHP Version: 8.3.30
 
@@ -66,7 +66,8 @@ INSERT INTO `tabel_pendaftaran` (`id_pendaftaran`, `nama_calon`, `asal_sekolah`,
 (20, 'Taufik Hidayat', 'SMAN 1 Padang', 85.10, 0.00, 'Kedinasan', NULL, NULL, NULL, NULL, 'SK-088/KEMENHUB/2026', 'Kementerian Perhubungan'),
 (21, 'Vania Larissa', 'SMAN 2 Pontianak', 87.30, 0.00, 'Kedinasan', NULL, NULL, NULL, NULL, 'SK-312/BMKG/2026', 'BMKG'),
 (22, 'Wawan Setiawan', 'SMK Penerbangan Bogor', 84.00, 0.00, 'Kedinasan', NULL, NULL, NULL, NULL, 'SK-701/DISHUB/2026', 'Dinas Perhubungan Provinsi'),
-(23, 'Yulia Ningsih', 'SMAN 1 Ambon', 88.20, 0.00, 'Kedinasan', NULL, NULL, NULL, NULL, 'SK-442/KEMENKES/2026', 'Kementerian Kesehatan');
+(23, 'Yulia Ningsih', 'SMAN 1 Ambon', 88.20, 0.00, 'Kedinasan', NULL, NULL, NULL, NULL, 'SK-442/KEMENKES/2026', 'Kementerian Kesehatan'),
+(24, 'Bintang Ramadhan', 'SMAN 10 Fajar', 90.25, 150000.00, 'Prestasi', NULL, NULL, 'Juara 1 Pencak Silat', 'Nasional', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -86,7 +87,7 @@ ALTER TABLE `tabel_pendaftaran`
 -- AUTO_INCREMENT for table `tabel_pendaftaran`
 --
 ALTER TABLE `tabel_pendaftaran`
-  MODIFY `id_pendaftaran` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_pendaftaran` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
