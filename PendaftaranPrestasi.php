@@ -12,12 +12,15 @@ class PendaftaranPrestasi extends Pendaftaran {
         $this->tingkatPrestasi = $tingkat;
     }
 
-    // Mengimplementasikan metode info jalur
+    // METHOD OVERRIDING: Potongan langsung Rp 50.000 dari biaya dasar
+    public function hitungTotalBiaya() {
+        return $this->biayaPendaftaranDasar - 50000;
+    }
+
     public function tampilkanInfoJalur() {
         return "Jalur Prestasi - " . $this->jenisPrestasi . " Tingkat " . $this->tingkatPrestasi;
     }
 
-    // Metode Query Spesifik
     public static function getDaftarPrestasi($db) {
         $query = "SELECT id_pendaftaran, nama_calon, asal_sekolah, nilai_ujian, biaya_pendaftaran_dasar, jenis_prestasi, tingkat_prestasi 
                   FROM tabel_pendaftaran 

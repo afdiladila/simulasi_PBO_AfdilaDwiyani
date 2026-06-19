@@ -12,12 +12,15 @@ class PendaftaranKedinasan extends Pendaftaran {
         $this->instansiSponsor = $sponsor;
     }
 
-    // Mengimplementasikan metode info jalur
+    // METHOD OVERRIDING: Surcharge administrasi khusus sebesar 25% (dikali 1.25)
+    public function hitungTotalBiaya() {
+        return $this->biayaPendaftaranDasar * 1.25;
+    }
+
     public function tampilkanInfoJalur() {
         return "Jalur Kedinasan - Sponsor: " . $this->instansiSponsor . " (No SK: " . $this->skIkatanDinas . ")";
     }
 
-    // Metode Query Spesifik
     public static function getDaftarKedinasan($db) {
         $query = "SELECT id_pendaftaran, nama_calon, asal_sekolah, nilai_ujian, biaya_pendaftaran_dasar, sk_ikatan_dinas, instansi_sponsor 
                   FROM tabel_pendaftaran 

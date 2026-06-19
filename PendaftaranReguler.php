@@ -12,12 +12,15 @@ class PendaftaranReguler extends Pendaftaran {
         $this->lokasiKampus = $kampus;
     }
 
-    // Mengimplementasikan metode info jalur
+    // METHOD OVERRIDING: Tarif standar murni tanpa biaya tambahan
+    public function hitungTotalBiaya() {
+        return $this->biayaPendaftaranDasar;
+    }
+
     public function tampilkanInfoJalur() {
         return "Jalur Reguler - Prodi: " . $this->pilihanProdi . " (" . $this->lokasiKampus . ")";
     }
 
-    // Metode Query Spesifik
     public static function getDaftarReguler($db) {
         $query = "SELECT id_pendaftaran, nama_calon, asal_sekolah, nilai_ujian, biaya_pendaftaran_dasar, pilihan_prodi, lokasi_kampus 
                   FROM tabel_pendaftaran 
